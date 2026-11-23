@@ -71,3 +71,22 @@ for path in image_paths:
         plt.title("Face Not Detected")
         plt.axis("off")
         plt.show()
+
+
+
+
+
+
+import os
+
+print("Checking Kaggle input folder...")
+
+if os.path.exists("/kaggle/input"):
+    print("Input folder exists!")
+
+    for root, dirs, files in os.walk("/kaggle/input"):
+        print("\nFolder:", root)
+        print("Files:", files)
+
+else:
+    print("Kaggle input folder not found!")
